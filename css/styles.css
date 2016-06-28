@@ -1,0 +1,92 @@
+/* Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to bottom, #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%);
+}
+
+/* Tag Styles*/
+
+.section-search button {
+    padding: 1em 2em;
+    background-color: dodgerblue;
+    color: whitesmoke;
+    font-size: 1.2em;
+}
+/* User Styles*/
+.caratula {
+    text-align: center;
+    padding: 1em;
+    margin:0;
+    text-shadow: 0px 0px 7px rgba(150, 150, 150, 0.84);
+    box-shadow:   0px 6px 5px 0px rgba(50, 50, 50, 0.77);
+    background-color: dodgerblue;
+    color:whitesmoke;
+}
+.container {
+    width: 100%;
+    
+}
+
+.content {
+    margin-top: 1em;
+}
+
+.content, .section-data-input, .section-search, .result {
+    bordxer: 1px tomato solid;
+}
+
+.section-data-input {
+    padding-left: 1em;
+    width: 50%;
+    margin: 1em;
+}
+
+.section-data-input button {
+    margin: 0.5rem;
+}
+
+.result {
+    padding-left: 1em;
+    width: 30%;
+    margin: 1em;
+}
+
+.section-search {
+    left: 30%;
+    margin: 1em;
+    text-align: center;
+    bottom: 0;
+    position: absolute;
+}
+
+.card {
+    border: 1px rgba(50, 48, 50, 1) solid;
+    box-shadow: 0px 0px 11px 0px rgba(50, 48, 50, 1);
+}
+
+/* Util Styles */
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+} 
+.group:after {
+    clear: both;
+}
+
+.clearfix {
+    clear: both;
+}
