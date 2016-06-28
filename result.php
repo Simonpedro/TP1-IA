@@ -32,14 +32,14 @@ foreach ($_REQUEST['data'] as $precedencia) {
     $nodo->hijos[] = $nodoSucesor;
     
 }
-
+//creo un grafo a partir de los nodos
 $grafo = new Grafo();
 $grafo->nodos = $nodos;
 
 
-
-if ($grafo->existeNodo($_REQUEST['nodoRaiz']) && $grafo->existeNodo($_REQUEST['nodoObjetivo'])) {
-    $result = (new AlgoritmoBusqueda($grafo))->buscarDependecia($_REQUEST['nodoRaiz'], $_REQUEST['nodoObjetivo']);
+// e
+if ($grafo->existeNodo($_REQUEST['nodoRaiz']) && $grafo->existeNodo($_REQUEST['nodoObjetivo'])) { //valido si existen los nodos introducidos para checkear dependencias
+    $result = (new AlgoritmoBusqueda($grafo))->buscarDependecia($_REQUEST['nodoRaiz'], $_REQUEST['nodoObjetivo']);  //Se fija si hay dependencia, entre el id de un nodo raiz y de un nodo objetivo
     echo $result==true?"SI depende":"No depende";
 } else {
     echo 'Las ciudades ingresadas no son correctas';
@@ -50,7 +50,7 @@ if ($grafo->existeNodo($_REQUEST['nodoRaiz']) && $grafo->existeNodo($_REQUEST['n
 
 
 
-// Funcion util
+// funcion que valida si ya esxiste un nodo, de ser asi devuelve el indice en el array, sino devuelve -1
 function searchNodo($id,$nodos) {
     $i = null;
     $indice = 0;
