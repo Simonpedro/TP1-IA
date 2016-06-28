@@ -20,7 +20,7 @@ foreach ($_REQUEST['data'] as $precedencia) {
         $nodo = $nodos[$i];
     }
     $nodoSucesor;
-    $i = searchNodo($precedencia['precedeA']);
+    $i = searchNodo($precedencia['precedeA'], $nodos);
     if ($i == -1) {
         $nodoSucesor = new Nodo();
         $nodoSucesor->id = $precedencia['precedeA'];
